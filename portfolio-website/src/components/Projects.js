@@ -52,7 +52,7 @@ const Projects = () => {
                 <div className='hidden group-hover:block translate-y-[700%] items-center justify-center w-full py-4'> 
                     <div className='inline-flex space-x-3'>
                        <Link to='/portfolio'> <button className='bg-cyan-600 text-white py-3 px-5 rounded-3xl md:ml-8 hover:bg-cyan-400 duration-500'>View</button> </Link>
-                       <Link to='/portfolio'> <button  className='bg-cyan-600 text-white py-3 px-5 rounded-3xl md:ml-8 hover:bg-cyan-400 duration-500'>github</button> </Link>
+                       <a href='https://github.com/evanmulcare'> <button  className='bg-cyan-600 text-white py-3 px-5 rounded-3xl md:ml-8 hover:bg-cyan-400 duration-500'>github</button> </a>
                     </div>
                 </div>
              </div>
@@ -76,7 +76,7 @@ const Projects = () => {
 
 
             <div className='text-center'>
-                <p>Here are a few of my projects. check them out on their pages if you wish, you can view more of my work on GitHub!</p>
+                <p>Here are a few of my projects. check them out on their pages if you wish. You can view more of my work on GitHub!</p>
             </div> 
         </div>
     </div>

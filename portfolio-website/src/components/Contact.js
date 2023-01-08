@@ -1,6 +1,20 @@
-import React from 'react'
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
+    const form = useRef();
+
+    const sendEmail = (e) => {
+      e.preventDefault();
+  
+      emailjs.sendForm('service_qqnirgm', 'template_f8fbaz4', form.current, 'tPepm3RSIO6xKdtEv')
+        .then((result) => {
+            console.log(result.text);
+        }, (error) => {
+            console.log(error.text);
+        });
+    };
+
   return (
 
     <div className='flex items-center justify-center w-full text-black bg-cyan-700' id='contact'>
@@ -16,43 +30,40 @@ const Contact = () => {
            
                     <div className='inline-flex space-x-2 items-center'>
                         <ion-icon name="mail" className="text-teal-500 text-xl"></ion-icon>
-                        <span className='font-semibold hover:underline'>evanmulcare@gmail.ie</span>
+                        <span className='font-semibold hover:underline'>evanmulcare@gmail.com</span>
                     </div>
                 </div>
             </div>
             <div>
                     <div className='bg-cyan-600 rounded-xl shadow-lg p-8 text-white md:w-80'>
-                        <form action="" className='flex flex-col space-y-4'>
+                        <form ref={form} onSubmit={sendEmail} className='flex flex-col space-y-4'>
                             <div>
-                                <label for="" className='text-sm'>Name</label>
+                                <label className='text-sm form-label' htmlFor="name">Name</label>
                 
-                                <input type="text" placeholder='Your Name' className='ring-1 ring-gray-300 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 focus:ring-teal-300 text-black' />
+                                <input type="text" name="user_name" placeholder='Your Name' className='form-control ring-1 ring-gray-300 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 focus:ring-teal-300 text-black' required/>
 
                             </div>
                             <div>
-                                <label for="" className='text-sm'>Email Address</label>
+                                <label className='text-sm form-label'>Email Address</label>
                 
-                                <input type="email" placeholder='Email Address' className='ring-1 ring-gray-300 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 focus:ring-teal-300 text-black' />
+                                <input type="text" name="user_email" placeholder='Email Address' className='form-control ring-1 ring-gray-300 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 focus:ring-teal-300 text-black' required/>
 
                             </div>
                             <div>
-                                <label for="" className='text-sm'>Message</label>
+                                <label className='text-sm form-label' htmlFor="message">Message</label>
                 
-                                <textarea placeholder='Message' rows="4" className='ring-1 ring-gray-300 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 focus:ring-teal-300 text-black' />
+                                <textarea type="submit" name="message" placeholder='Message' rows="4" className='form-control ring-1 bg-white ring-gray-300 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 focus:ring-teal-300 text-black' required/>
                                 
                             </div>
-                                <button className='inline-block self-end text-xl font-bold'>SEND MESSAGE</button>
-                        </form>
+                            <input type="submit" value="Send" className='text-xl font-bold cursor-pointer' />
+                            </form>
+                        {/*        <button className='inline-block self-end text-xl font-bold' type="submit">{formStatus}</button>
+                        </form> */}
                     </div>
             </div>
             </div>
-        
-
-            
 
         </div>
-        
-        
     </div>
   )
 }

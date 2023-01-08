@@ -10,7 +10,7 @@ const Hero = () => {
                 <h1 className='text-white text-4xl py-1 font-bold drop-shadow-xl'>Evan Mulcare</h1>
                 <br />
                 <div className='inline-flex space-x-2 text-4xl'>
-                <a className='cursor-pointer'><p className='text-center text-white font-bold drop-shadow-xl'><ion-icon name="logo-github"></ion-icon></p></a>
+                <a href='https://github.com/evanmulcare'className='cursor-pointer'><p className='text-center text-white font-bold drop-shadow-xl'><ion-icon name="logo-github"></ion-icon></p></a>
                 </div>
                   <br/>
                         <Link to='contact' className='text-xl font-bold cursor pointer drop-shadow-lg hover:underline'>CONTACT</Link>
