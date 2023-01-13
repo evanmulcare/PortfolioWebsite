@@ -1,10 +1,8 @@
 import React from 'react'
 import Header from './Header'
-import Screenlog from '../assets/Screenlogs.png'
 import Create from '../assets/Create.png'
 import Homepg from '../assets/Homepg.png'
-import ScreenLogsrecord from '../assets/ScreenLogsrecord.mov'
-import { Link } from 'react-router-dom'
+import ScreenLogsrecord from '../assets/ScreenLogsrecord.mp4'
 
 const Screenlogs = () => {
   return (
@@ -34,7 +32,11 @@ const Screenlogs = () => {
         </div>
     </div>
     <section >
-        <div><video src={ScreenLogsrecord}></video></div>
+        <div>
+        <video controls autoplay>
+            <source src={ScreenLogsrecord} type="video/mp4" />
+        </video>
+        </div>
         <div className='pt-16 pb-16'>
             <div className='text-center text-lg p-4'>
                 <h2 className='font-semibold'>Project Goals</h2>

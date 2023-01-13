@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import Screenlogs from '../assets/Screenlogs.png'
-import Caravan from '../assets/Caravan.png'
-import portfolio from '../assets/portfolio.png'
+import cover from '../assets/cover.png'
 
 const Projects = () => {
     const slides = [
@@ -10,10 +9,7 @@ const Projects = () => {
           url: Screenlogs,
         },
         {
-          url: Caravan,
-        },
-        {
-          url: portfolio,
+          url: cover,
         }
       ];
 

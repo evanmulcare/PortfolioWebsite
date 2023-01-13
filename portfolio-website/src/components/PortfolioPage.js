@@ -1,13 +1,12 @@
 import React from 'react'
-import Nav from "./Nav";
 import { Link } from 'react-router-dom'
 import Screenlog from '../assets/Screenlogs.png'
-import Caravan from '../assets/Caravan.png'
+import dashCover from '../assets/DashCover.png'
 
 const PortfolioPage = () => {
   return (
     <div className='m-2 md:m-10 p-2 md:p-10 bg-white rounded-3xl h-full break-all'>
-      <div className='grid grid-rows-3 gap-4'>
+      <div className='grid grid-rows-2 gap-4'>
             <div className='flex flex-col border text-center rounded-xl py-12 px-8'>
 
                     <Link to='screen-logs'>
@@ -35,7 +34,7 @@ const PortfolioPage = () => {
                     <Link to='caravan-management'>
                     <div className='grid grid-cols-2'>
                       
-                              <img src={Caravan} className='rounded-md'/>
+                              <img src={dashCover} className='rounded-md'/>
                         
                         <div>
                           <h3 className='text-xl font-bold py-4'>Caravan Park Management</h3>
@@ -50,21 +49,6 @@ const PortfolioPage = () => {
                             <li>Auth0</li>
 
                           </ul>
-                        </div>
-                    </div>
-                    </Link>
-              </div>
-            <div className='flex flex-col border text-center rounded-xl py-12 px-8'>
-                    <Link to='caravan-management'>
-                    <div className='grid grid-cols-2'>
-                      
-                              <img src={Screenlog} className='rounded-md'/>
-                        
-                        <div>
-                          <h3 className='text-xl font-bold py-4'>Noir Adventure</h3>
-                          <p>
-                              list of current Tools.
-                          </p>
                         </div>
                     </div>
                     </Link>

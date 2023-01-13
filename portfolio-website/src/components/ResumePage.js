@@ -52,7 +52,7 @@ const ResumePage = () => {
               <h1 className='text-cyan-700 text-2xl underline'>Projects</h1>
 
                   <div className='grid grid-cols-2'>
-                    <h3 className='font-semibold'>Caravan park management systemCaravan park management system </h3>
+                    <h3 className='font-semibold'>Caravan park management system</h3>
                     <h3 className='font-semibold'>Dec. 2022</h3>
                   </div>
                     <br />
